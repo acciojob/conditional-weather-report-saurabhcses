@@ -6,7 +6,7 @@ const App = () => {
   // ✅ Hardcoded weather data
   const [weather] = useState({
     temperature: 20,
-    conditions: "Sunny",
+    conditions: "Sunny"
   });
 
   return (
