@@ -5,7 +5,7 @@ import WeatherDisplay from "./WeatherDisplay";
 const App = () => {
   // ✅ Hardcoded weather data
   const [weather] = useState({
-    temperature: 20,
+    temperature: 25,
     conditions: "Sunny"
   });
 
