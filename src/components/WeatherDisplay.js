@@ -1,18 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import './../styles/App.css';
-import WeatherDisplay from "./WeatherDisplay";
 
-const App = () => {
-  const [weather] = useState({
-    temperature: 25,
-    conditions: "Sunny",
-  });
+const WeatherDisplay = ({ weather }) => {
+  // Conditional styling
+  const tempStyle = {
+    color: weather.temperature > 20 ? "red" : "blue",
+  };
 
   return (
     <div>
-      <WeatherDisplay weather={weather} />
+      <p>
+        Temperature: <span style={tempStyle}>{weather.temperature}°C</span>
+      </p>
+      <p>Conditions: {weather.conditions}</p>
     </div>
   );
-}
+};
 
-export default App;
+export default WeatherDisplay;
